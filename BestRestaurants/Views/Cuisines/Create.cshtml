@@ -1,14 +1,14 @@
 @{
   Layout = "_Layout";
 }
+<link rel="stylesheet" href="~/css/edit.css">
 
 @model BestRestaurants.Models.Cuisine
 
-<h4>Add a new task</h4>
+<h1>Add a new cuisine</h1>
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
-  <input type="submit" value="Add new cuisine" />
+  @Html.TextBoxFor(model => model.Name, new { placeholder = "Name"})<br><br>
+  <button type="submit" class="btn btn-outline-info add">Add Cuisine</button>
 }
-<button class="btn btn-light">@Html.ActionLink("Show all cuisines", "Index")</button>
+<button class="btn btn-outline-info show">@Html.ActionLink("Show all cuisines", "Index")</button>

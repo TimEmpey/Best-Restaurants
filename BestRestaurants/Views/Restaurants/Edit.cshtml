@@ -1,6 +1,7 @@
 @{
   Layout = "_Layout";
 }
+<link rel="stylesheet" href="~/css/edit.css">
 
 @model BestRestaurants.Models.Restaurant
 
@@ -11,14 +12,10 @@
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.RestaurantId)
-
-  @Html.LabelFor(model => model.Name)
   @Html.EditorFor(model => model.Name)
-
-  @Html.LabelFor(model => model.Cuisine)
   @Html.DropDownList("CuisineId")
 
-  <input type="submit" value="Save" />
+  <button type="submit" class="btn btn-success">Save</button>
 }
-
-<button class="btn btn-light">@Html.ActionLink("Back to cuisine", "Index")</button>
+<br>
+<button class="btn btn-outline-info show">@Html.ActionLink("Back to cuisine", "Index")</button>

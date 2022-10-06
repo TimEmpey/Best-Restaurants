@@ -1,6 +1,7 @@
 @{
   Layout = "_Layout";
 }
+<link rel="stylesheet" href="~/css/edit.css">
 
 @model BestRestaurants.Models.Cuisine
 
@@ -9,6 +10,6 @@
 @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
 @using (Html.BeginForm())
 {
-  <input type="submit" value="Delete" />
+  <button class="btn btn-outline-danger"type="submit" value="Delete">Delete</button>
 }
 <button class="btn btn-light">@Html.ActionLink("Back to List", "Index")</button>

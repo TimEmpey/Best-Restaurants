@@ -1,8 +1,14 @@
 @{
   Layout = "_Layout";
 }
+<link rel="stylesheet" href="~/css/styles.css">
 
 <h1>Welcome to the Best Restaurants!</h1>
 
-<button class="btn btn-light">@Html.ActionLink("See all restaurants", "Index", "Restaurants")</button> 
-<button class="btn btn-light">@Html.ActionLink("See all cuisines", "Index", "Cuisines")</button>
+<div class='container home'>
+  <button class="restaurantAll btn btn-outline-info btn-block">@Html.ActionLink("See all restaurants", "Index", "Restaurants")</button>   
+
+  <button class="cuisineAll btn btn-outline-info btn-block">@Html.ActionLink("See all cuisines", "Index", "Cuisines")</button>
+
+</div>
+

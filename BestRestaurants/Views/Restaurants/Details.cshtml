@@ -1,12 +1,18 @@
 @{
   Layout = "_Layout";
 }
+<link rel="stylesheet" href="~/css/details.css">
 
 @model BestRestaurants.Models.Restaurant
 
-<h2>Restaurant Details</h2>
+<h1>Restaurant Details</h1>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
-<button class="btn btn-light">@Html.ActionLink("Edit Restaurant", "Edit", new { id = Model.RestaurantId })</button>
-<button class="btn btn-light">@Html.ActionLink("Delete Restaurant", "Delete", new { id = Model.RestaurantId })</button>
-<button class="btn btn-light">@Html.ActionLink("Back to list", "Index")</button>
+<h1>@Html.DisplayFor(model => model.Name)</h1>
+<p>@Html.DisplayNameFor(model => model.Rating): @Html.DisplayFor(model => model.Rating) /5</p>
+<p>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)</p>
+<p>@Html.DisplayNameFor(model => model.Cost): @Html.DisplayFor(model => model.Cost) /4</p>
+<p>Cuisine: @Html.DisplayFor(model => model.Cuisine.Name)</p>
+
+<button class="btn btn-outline-info home">@Html.ActionLink("Edit Restaurant", "Edit", new { id = Model.RestaurantId })</button>
+<button class="btn btn-outline-info middle">@Html.ActionLink("Delete Restaurant", "Delete", new { id = Model.RestaurantId })</button>
+<button class="btn btn-outline-info home">@Html.ActionLink("Back to list", "Index")</button>

@@ -1,20 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
-
 body {
-background-color: #f7e5cd;
-text-align: center;
-}
+  background-color: #f7e5cd;
+  text-align: center;
+  }
 
-div#footer {
-	position:fixed;
-	bottom:0px;
-	left:-15px;
-  height: 20%;
-	width:100%;
-	color:#CCC;
-	padding:8px;
-  margin-top: 5px;
-}
+  div#footer {
+    position:fixed;
+    bottom:0px;
+    left:-15px;
+    height: 20%;
+    width:100%;
+    color:#CCC;
+    padding:8px;
+    margin-top: 5px;
+  }
 
 h1 {
   color: rgb(93, 64, 44);
@@ -22,10 +20,6 @@ h1 {
   font-family: 'figtree', sans-serif;
   font-weight: bold;
   font-size: 50px;
-}
-
-.container.home {
-  margin-top: 250px;
 }
 
 a{
@@ -43,14 +37,16 @@ a:hover {
 button {
   margin-bottom: 15px;
 }
-
-.cuisineAll {
-  padding-left: 24px;
-  padding-right: 24px;
+.add {
   background-color: rgb(93, 64, 44);
+  color: white;
+  text-decoration: none;
+  font-family: 'figtree', sans-serif;
+  font-size: 25px;
+  margin-top: 20px;
 }
 
-.restaurantAll {
+.show {
   background-color: rgb(93, 64, 44);
 }
 

@@ -1,22 +1,28 @@
 @{
   Layout = "_Layout";
 }
+<link rel="stylesheet" href="~/css/index.css">
 
 @using BestRestaurants.Models;
 @model List<BestRestaurants.Models.Restaurant>;
 
 <h1>Restaurants</h1>
 
-@if (@Model.Count == 0)
-{
-  <h3>No restaurants have been added yet!</h3>
-} 
+<div class="container list">
+  @if (@Model.Count == 0)
+  {
+    <h3>No restaurants have been added yet!</h3>
+  } 
 
-@foreach (Restaurant restaurant in Model)
-{
-  <li>@Html.ActionLink($"{restaurant.Name}", "Details", new { id = restaurant.RestaurantId }) | @restaurant.Cuisine.Name</li>
-}
+  @foreach (Restaurant restaurant in Model)
+  {
+    <li>@Html.ActionLink($"{restaurant.Name}", "Details", new { id = restaurant.RestaurantId }) | @restaurant.Cuisine.Name</li>
+  }
+</div>
 
-<button class="btn btn-light">@Html.ActionLink("Add new restaurant", "Create")</button>
-<button class="btn btn-light">@Html.ActionLink("Add new cuisine", "Create", "Cuisines")</button>
-<button class="btn btn-light">@Html.ActionLink("Home", "Index", "Home")</button>
+
+<div class="container buttons">
+  <button class="btn btn-outline-info restaurantNew">@Html.ActionLink("Add new restaurant", "Create")</button>
+  <button class="btn btn-outline-info cuisineNew">@Html.ActionLink("Add new cuisine", "Create", "Cuisines")</button>
+  <button class="btn btn-outline-info home">@Html.ActionLink("Home", "Index", "Home")</button>
+</div>

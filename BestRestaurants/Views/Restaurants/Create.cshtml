@@ -1,28 +1,24 @@
 @{
   Layout = "_Layout";
 }
+<link rel="stylesheet" href="~/css/edit.css">
 
 @model BestRestaurants.Models.Restaurant
 
-<h4>Add a restaurant</h4>
+<h1>Add a restaurant</h1>
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
-
-  @Html.LabelFor(model => model.Rating)
-  @Html.TextBoxFor(model => model.Rating, new { @Type = "number", min="0", max="5"})
-
-  @Html.LabelFor(model => model.Cost)
-  @Html.TextBoxFor(model => model.Cost, new { @Type = "number", min="0", max="4"})
-
-  @Html.LabelFor(model => model.Type)
-  @Html.TextBoxFor(model => model.Type)
-
-  @Html.LabelFor(model => model.Cuisine)
+  @Html.TextBoxFor(model => model.Name, new { placeholder = "Name"})<br>
+  <br>
+  @Html.TextBoxFor(model => model.Rating, new { @Type = "number", min="0", max="5", placeholder ="Rating", style = "width: 183px"})<br>
+  <br>
+  @Html.TextBoxFor(model => model.Cost, new { @Type = "number", min="0", max="4", placeholder="Cost", style = "width: 183px"})<br>
+  <br>
+  @Html.TextBoxFor(model => model.Type, new { placeholder = "Type"})<br>
+  <br>
   @Html.DropDownList("CuisineId")
-
-  <input type="submit" value="Add new restaurant" class="btn btn-default" />
+  <br>
+  <button type="submit" class="btn btn-outline-info add">Add Restaurant</button>
 }
-<button class="btn btn-light">@Html.ActionLink("Show all restaurants", "Index")</button>
+<button class="btn btn-outline-info show">@Html.ActionLink("Show All Restaurants", "Index")</button>

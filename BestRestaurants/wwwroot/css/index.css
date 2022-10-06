@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
+
+body {
+  background-color: #f7e5cd;
+  text-align: center;
+  font-family: 'figtree', sans-serif;
+  }
+
+  div#footer {
+    position:fixed;
+    bottom:0px;
+    left:-15px;
+    height: 20%;
+    width:100%;
+    color:#CCC;
+    padding:8px;
+    margin-top: 5px;
+  }
+
+h1 {
+  color: rgb(93, 64, 44);
+  text-align: center;
+  font-family: 'figtree', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.cuisines{
+  color:white;
+  font-size: 25px;
+  font-family: 'figtree', sans-serif;
+}
+
+.list {
+  border-radius: 4px;
+  margin-top: 30px;
+  background-color: rgba(171, 135, 110, 0.56);
+  width: 80%;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 380px;
+  padding-top: 20px;
+}
+
+.container.buttons {
+  margin-top: 53px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  font-family: 'figtree', sans-serif;
+  font-size: 25px;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  margin-bottom: 15px;
+}
+
+.cuisineNew {
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: rgb(93, 64, 44);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.restaurantNew {
+  background-color: rgb(93, 64, 44);
+}
+
+.home {
+  background-color: rgb(93, 64, 44);
+}
+
+button:hover {
+  transform: scale(1.1);
+}
